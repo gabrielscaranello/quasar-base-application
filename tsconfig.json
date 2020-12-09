@@ -2,5 +2,8 @@
   "extends": "@quasar/app/tsconfig-preset",
   "compilerOptions": {
     "baseUrl": "."
-  }
+  },
+  "files": ["src/shims-vue.d.ts"],
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "src/**/*.vue"]
 }

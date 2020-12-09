@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const { resolve } = require('path')
 module.exports = {
   // https://eslint.org/docs/user-guide/configuring#configuration-cascading-and-hierarchy
   // This option interrupts the configuration hierarchy at this file
@@ -15,6 +15,7 @@ module.exports = {
     extraFileExtensions: ['.vue'],
     parser: '@typescript-eslint/parser',
     project: resolve(__dirname, './tsconfig.json'),
+    createDefaultProgram: true,
     tsconfigRootDir: __dirname,
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module' // Allows for the use of imports
@@ -55,7 +56,7 @@ module.exports = {
 
     // https://eslint.vuejs.org/user-guide/#why-doesn-t-it-work-on-vue-file
     // required to lint *.vue files
-    'vue',
+    'vue'
 
     // https://github.com/typescript-eslint/typescript-eslint/issues/389#issuecomment-509292674
     // Prettier has not been included as plugin to avoid performance impact
